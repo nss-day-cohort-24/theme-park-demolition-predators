@@ -9,6 +9,7 @@
     "author": "DemolitionPreds",
     "license": "ISC",
     "devDependencies": {
+        "bootstrap": "^4.0.0",
         "browserify": "^16.0.0",
         "grunt": "^1.0.1",
         "grunt-browserify": "^5.2.0",
