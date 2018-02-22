@@ -1,4 +1,42 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato");
+#header {
+  min-height: 37px;
   background-color: #3E50B4; }
+
+#header p, input {
+  display: inline-block; }
+
+#header input {
+  float: right; }
+
+#map-display {
+  min-height: 285px;
+  background-image: url("/images/map_image.png");
+  background-size: cover;
+  background-position: center; }
+
+#data-display {
+  min-height: 300px;
+  background-color: #FF3F80; }
+
+.attr {
+  height: 50px;
+  border: 1px solid white; }
+
+.list_icon {
+  width: 33%;
+  display: inline; }
+
+.list_desc {
+  width: 67%;
+  display: inline; }
+
+#nav {
+  height: 50px;
+  background-color: #3E50B4; }
+
+.icon {
+  display: inline-block;
+  background-color: #FF3F80; }
 
 /*# sourceMappingURL=main.css.map */
