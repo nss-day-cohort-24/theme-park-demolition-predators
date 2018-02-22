@@ -1,5 +1,14 @@
 # Theme Park Map Builder - Group Project
 
+## Overview
+This project for Nashville Software School presented us with the task of helping an imaginary theme park company with creating an online interactive map. 
+
+##User Instructions
+Use the interactive map to find attractions and areas of the park that are of interest to you. Click on a button to display relevant park info.
+
+##Developer Instructions
+Clone the repository and install npm, grunt, and bootstrap. 
+
 ## Client
 Unitainment Theme Park
 
