@@ -7,21 +7,20 @@ publisher.areaGrid();
 
 let db = require("./load");
 
-
 //AREA BUTTONS
-document.getElementById("fantasy-btn").addEventListener("click", fantasy);
+document.getElementById("fantasy-btn").addEventListener("click", oneArea);
 
-document.getElementById("mainSt-btn").addEventListener("click", mainSt);
+document.getElementById("mainSt-btn").addEventListener("click", oneArea);
 
-document.getElementById("adventure-btn").addEventListener("click", adventure);
+document.getElementById("adventure-btn").addEventListener("click", oneArea);
 
-document.getElementById("frontier-btn").addEventListener("click", frontier);
+document.getElementById("frontier-btn").addEventListener("click", oneArea);
 
-document.getElementById("liberty-btn").addEventListener("click", liberty);
+document.getElementById("liberty-btn").addEventListener("click", oneArea);
 
-document.getElementById("cinderalla-btn").addEventListener("click", cinderella);
+document.getElementById("cinderalla-btn").addEventListener("click", oneArea);
 
-document.getElementById("tomorrow-btn").addEventListener("click", tomorrow);
+document.getElementById("tomorrow-btn").addEventListener("click", oneArea);
 
 document.getElementById("allArea-btn").addEventListener("click", allArea);
 
@@ -42,14 +41,4 @@ document.getElementById("special-btn").addEventListener("click", special);
 document.getElementById("game-btn").addEventListener("click", game);
 
 document.getElementById("animals-btn").addEventListener("click", animals);
-
-
-
-
-
-
-
-
-
-
 
