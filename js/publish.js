@@ -50,4 +50,4 @@ let areaGrid = () => {
 };
 
 
-module.exports = {areaGrid}
+module.exports = {areaGrid};
