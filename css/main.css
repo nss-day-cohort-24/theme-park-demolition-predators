@@ -16,8 +16,16 @@
   background-position: center; }
 
 #data-display {
+  padding: 25px;
   min-height: 300px;
   background-color: #FF3F80; }
+
+.col {
+  padding: 0; }
+
+.btn {
+  min-width: 100px;
+  margin-bottom: 10px; }
 
 .attr {
   height: 50px;
