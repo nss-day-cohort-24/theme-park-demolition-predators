@@ -21,7 +21,7 @@ let areaGrid = () => {
     <button id="fantasy-btn">Fantasy Land</botton>
     <button id="tomorrow-btn">Tomorrow Land</button>
     <button id="cinderella-btn">Cinderella Castle</button>
-    <button id="allArea-btn">All Area</button>`;
+    <button id="allArea-btn">All Areas</button>`;
 };
    
 
