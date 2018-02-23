@@ -10,42 +10,50 @@ $julius: 'Julius Sans One', sans serif;
 $lato: 'Lato', sans serif;
 
 
+#data-display {
+  min-height: 300px;
+  background-color: $accent-color;
+  --availHeight: calc(100vh - 100px);
+  --halfAvail: calc(var(--availHeight)/2);
+  height: var(--halfAvail);
+}
+
+#data-display div {
+  height: 50px;
+  color: white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  // border-left: 1px solid white;
+}
+
 #header {
-  min-height: 37px;
+  width: 100%;
+  height: 50px;
   background-color: $primary-color;
 }
 
-#header p, input {
-  display: inline-block;
-}
-
-#header input {
-  float: right;
-}
-
 #map-display {
-  min-height: 285px;
+  width: 100%;
+  --availHeight: calc(100vh - 100px);
+  --halfAvail: calc(var(--availHeight)/2);
+  height: var(--halfAvail);
   background-image: url("/images/map_image.png");
   background-size: cover;
   background-position: center;
 }
 
-button {
-  color: white;
-  border-radius: 5px;
-  background-color: none;
-  border-color: white;
+#nav {
+  height: 50px;
+  background-color: $primary-color;
 }
 
-#data-display {
-  padding: 25px;
-  min-height: 300px;
-  background-color: $accent-color;
+#txt-search {
+  display: inline-block;
 }
 
 .btn-primary {
-  background-color: $accent-color;
-  border-color: $accent-color;
+  background-color: rba(255, 255, 255, 0);
+  border-color: white;
 }
 
 .attr{
@@ -54,7 +62,6 @@ button {
 }
 
 .footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: 50px;
@@ -71,12 +78,21 @@ button {
   display: inline;
 }
 
-#nav {
-  height: 50px;
-  background-color: $primary-color;
-}
-
 .icon {
   display: inline-block;
   background-color: $accent-color;
+}
+
+button {
+  color: white;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: white;
+}
+
+h1 {
+  margin-right: 5px;
+  font-size: 1em;
+  font-family: $julius;
+  color: white;
 }

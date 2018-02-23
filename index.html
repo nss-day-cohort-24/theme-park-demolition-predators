@@ -5,32 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Unitainment Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 <body>
-    <header id="header">
-      <p>Logo</p>
-      <input type="text" id="txt-search" placeholder="Search for an attaction..">
+  <div class="container">
+    <header id="header" class="container">
+        <h1>Demolition Predators Theme Park<br>Attraction Map<h1>
+        <input type="text" id="txt-search" placeholder="Search for an attraction..">
     </header>
 
-    <main>
-        <div id="map-display"></div>
-        <div id="data-display" class="container"></div>
+    <div id="map-display" class="container"></div>
 
-    </main>
+    <div id="data-display" class="container"></div>
+
 
     <footer id="filter" class="footer">
       <div class="btn-group-sm">
-        <button class="btn btn-primary btn">Rides</button>
-        <button class="btn btn-primary btn">Events</button>
-        <button class="btn btn-primary btn">Eats</button>
-        <button class="btn btn-primary btn">Amenities</button>
-        <button class="btn btn-primary btn">Info</button>
+        <button class="btn btn-primary">Rides</button>
+        <button class="btn btn-primary">Events</button>
+        <button class="btn btn-primary">Eats</button>
+        <button class="btn btn-primary">Amenities</button>
+        <button class="btn btn-primary">Info</button>
       </div>
     </footer>
+  </div>
 
-<!-- <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->    
-<script src="dist/app.js"></script>
+  <script src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="dist/app.js"></script>
 </body>
 </html>
