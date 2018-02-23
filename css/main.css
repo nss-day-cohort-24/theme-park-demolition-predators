@@ -4,13 +4,14 @@
   background-color: #FF3F80;
   --availHeight: calc(100vh - 100px);
   --halfAvail: calc(var(--availHeight)/2);
-  height: var(--halfAvail); }
+  height: var(--halfAvail);
+  border: 1px solid white;
+  font-family: "Lato", sans serif; }
 
 #data-display div {
   height: 50px;
   color: white;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white; }
+  border: 1px solid white; }
 
 #header {
   width: 100%;

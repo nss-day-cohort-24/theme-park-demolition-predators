@@ -31,7 +31,7 @@ let areaGrid = () => {
 
      <div class="row">
      <div id="cinderella-btn" class="col">Cinderella Castle</div>
-     <div id="allArea-btn" class="col">All Area</div>
+     <div id="allArea-btn" class="col">All Areas</div>
      </div>`;
 };
 
