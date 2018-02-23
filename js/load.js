@@ -2,7 +2,20 @@
 console.log("loading hi load.js");  //testing the file
 
 //Search Function for Search Bar by Dan
-var results = [];
+var getValue(obj, key) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getValues(obj[i], key));
+            }  else if (i == key) {
+                objects.push(obj[i]);
+            }
+    }
+    return objects;
+}
+
+/* var results = [];
 var entry;
 var str = "";
 
@@ -16,7 +29,9 @@ function search(source, str) {
         return entry.str.toUpperCase().indexOf(str) !== -1;
     });
     return results;
-}
+} */
+
+
 
 //From Million, pull and filter data
 
@@ -26,11 +41,13 @@ var config = {
     databaseURL: "https://theme-park-dp.firebaseio.com",
 
 };
-function areas() {                                                   //take a method, and url
+function areas() { 
+    console.log("areas function");                                                  //take a method, and url
     return new Promise(function (resolve, reject) {                    //take a resolve and reject
         var xhr = new XMLHttpRequest();                          //set the xmlhttp
         xhr.addEventListener('load', function () {                  // load for the following  
             var areas = JSON.parse(this.responseText);
+            console.log("areas", areas);
             if (this.status >= 200 && this.status < 300) {                  // Holds the status of the XMLHttpRequest which it means ok
                 resolve(areas);                                              //pass the responce
             } else {                                                  //otherwise
@@ -39,15 +56,16 @@ function areas() {                                                   //take a me
                     statusText: xhr.statusText                        //          
                 });
             }
-            xhr.onerror = function () {                        //  after it rejected we need to handle it
+          /*    xhr.onerror = function () {                        //  after it rejected we need to handle it
                 reject({
                     status: this.status,
                     statusText: xhr.statusText
-                });
-            };
+                 });
+                }; */
+            
+        });
             var x = xhr.open("GET", "https://theme-park-dp.firebaseio.com/areas.json"); //get the data
             xhr.send();
-        });
     });
 }
 
