@@ -44,9 +44,7 @@ let areaGrid = () => {
 
         <button id="cinderella-btn" class="btn btn-light col-sm">Cinderella Castle</button>
 
-        <button id="allArea-btn" class="btn btn-light col-sm">All Area</button>
-
-      </div>`;
+        <button id="allArea-btn" class="btn btn-light col-sm">All Area</button></div>`;
 };
 
 
