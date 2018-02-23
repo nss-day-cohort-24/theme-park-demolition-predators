@@ -2,7 +2,20 @@
 console.log("loading hi load.js");  //testing the file
 
 //Search Function for Search Bar by Dan
-var results = [];
+var getValue(obj, key) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getValues(obj[i], key));
+            }  else if (i == key) {
+                objects.push(obj[i]);
+            }
+    }
+    return objects;
+}
+
+/* var results = [];
 var entry;
 var str = "";
 
@@ -16,7 +29,9 @@ function search(source, str) {
         return entry.str.toUpperCase().indexOf(str) !== -1;
     });
     return results;
-}
+} */
+
+
 
 //From Million, pull and filter data
 
