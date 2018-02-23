@@ -3,9 +3,25 @@ console.log("hello main.js");
 
 
 let publisher = require("./publish");
-publisher.areaGrid();
 
 let db = require("./load");
+
+publisher.areaGrid(); 
+console.log("button", document.getElementById("allArea-btn"));
+
+
+
+
+let getAreas = db.areas()
+.then((resolve) => {
+    console.log("resolve:", resolve);
+},
+(reject) => {
+    console.log("OOPS!");
+}
+
+);
+//db.areas();
 
 // //AREA BUTTONS
 // document.getElementById("fantasy-btn").addEventListener("click", oneArea);
@@ -22,7 +38,9 @@ let db = require("./load");
 
 // document.getElementById("tomorrow-btn").addEventListener("click", oneArea);
 
-// document.getElementById("allArea-btn").addEventListener("click", allArea);
+/* document.getElementById("allArea-btn").addEventListener("click", getAreas); */
+
+document.getElementById("allArea-btn").addEventListener("click", getAreas);
 
 
 // //ATTRACTIONS BUTTONS
