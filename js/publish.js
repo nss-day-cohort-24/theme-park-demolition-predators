@@ -20,13 +20,13 @@ let areaGrid = () => {
 
         <button id="mainSt-btn" class="btn col-sm">Main Street U.S.A</button>
 
-        <button id ="adventure-btn" class="btn btn-light col-sm">Adventure Land</button>
+        <button id ="adventure-btn" class="btn btn-light col-sm">Adventureland</button>
 
       </div>
 
       <div class="col">
 
-        <button id="frontier-btn" class="btn btn-light col-sm">Frontier Land</button>
+        <button id="frontier-btn" class="btn btn-light col-sm">Frontierland</button>
 
         <button id="liberty-btn" class="btn btn-light col-sm">Liberty Square</button>
 
@@ -34,9 +34,9 @@ let areaGrid = () => {
 
       <div class="col">
 
-        <button id="fantasy-btn" class="btn btn-light col-sm">Fantasy Land</button>
+        <button id="fantasy-btn" class="btn btn-light col-sm">Fantasyland</button>
 
-        <button id="tomorrow-btn" class="btn btn-light col-sm">Tomorrow Land</button>
+        <button id="tomorrow-btn" class="btn btn-light col-sm">Tomorrowland</button>
 
       </div>
 
@@ -44,7 +44,7 @@ let areaGrid = () => {
 
         <button id="cinderella-btn" class="btn btn-light col-sm">Cinderella Castle</button>
 
-        <button id="allArea-btn" class="btn btn-light col-sm">All Area</button></div>`;
+        <button id="allArea-btn" class="btn btn-light col-sm">All Areas</button></div>`;
 };
 
 
