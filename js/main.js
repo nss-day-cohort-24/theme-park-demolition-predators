@@ -21,22 +21,68 @@ let getAreas = db.areas()
 var dataDisplay = document.getElementById("data-display");
 
 // Make data-display div contents clickable
-function whoClickd(event) {
-    console.log("whoClickd", event.target.getAttribute("id"));
-    var currentId = event.target.getAttribute("id");
+function whoClickd(event) {                             //creates whoClickd function and passes in event
+    var currentId = event.target.getAttribute("id");    //sets clicked target to currentId
     if (currentId.toString() === "allArea-btn") {
-        console.log("inside if");
         db.areas()
         .then((resolve) => {
-            console.log("resolve", resolve);
             dataDisplay.innerHTML = `<div>${resolve}</div>`;
         }, (reject) => {
             console.log("oops, that didn't work");
         });
-    } else if (currentId === "Fantasyland") {
-        console.log("second if");
-    }
+    }   else if (currentId.toString() === "adventure-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+    }   else if (currentId.toString() === "cinderella-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+    }   else if (currentId.toString() === "fantasy-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+    }   else if (currentId.toString() === "frontier-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+    }   else if (currentId.toString() === "liberty-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+    }   else if (currentId.toString() === "mainSt-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+    }   else if (currentId.toString() === "tomorrow-btn") {
+        db.areas()
+        .then((resolve) => {
+            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+        }, (reject) => {
+            console.log("oops, that didn't work");
+        });
+        
 }
+}
+
 
 document.getElementById("data-display").addEventListener("click", whoClickd);
 
