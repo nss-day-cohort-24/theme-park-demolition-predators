@@ -27,6 +27,27 @@ dataObject.getInventory = () => {
     return inventory;
 };
 
+//load data xhr
+dataObject.loadInventory = () => {
+    let val = 1;
+    return new Promise(function (resolve, reject) {
+        let inventoryLoader = new XMLHttpRequest();
+
+        inventoryLoader.open("GET", `"https://theme-park-dp.firebaseio.com/areas.json?orderBy="typeId"&equalTo="${val}"`);
+
+        inventoryLoader.send();
+
+        inventoryLoader.addEventListener("load", function () {
+            let data = JSON.parse(this.responseText);
+            console.log("data", data);
+            fillTheData(data);
+            console.log("inventory", inventory);
+            resolve(inventory);
+        });
+    });
+};
+
+//get All areas
 function areas() { 
     console.log("areas function");                                                  //take a method, and url
     return new Promise(function (resolve, reject) {                    //take a resolve and reject
@@ -46,25 +67,6 @@ function areas() {
     });
 }
 
-//load data xhr
-dataObject.loadInventory = () => {
-    let val = 1;
-    return new Promise(function (resolve, reject) {
-        let inventoryLoader = new XMLHttpRequest();
-
-        inventoryLoader.open("GET", `"https://theme-park-dp.firebaseio.com/areas.json?orderBy="typeId"&equalTo="${val}"`);
-       
-        inventoryLoader.send();
-
-        inventoryLoader.addEventListener("load", function () {
-            let data = JSON.parse(this.responseText);
-            console.log("data", data);
-            fillTheData(data);
-            console.log("inventory", inventory);
-            resolve(inventory);
-        });
-    });
-};
 
 //searching specific area(by id)
 
