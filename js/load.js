@@ -2,18 +2,24 @@
 console.log("loading hi load.js");  //testing the file
 
 var config = {
-    apiKey: "AIzaSyDSwR_6ryh4aah9J6XjlzuGTLHRzalW-_o",
     authDomain: "theme-park-dp.firebaseapp.com",
     databaseURL: "https://theme-park-dp.firebaseio.com",
 };
 
-let inventory = [];
-let dataObject = {};
+// REQUIRES
+let firebase = require("../lib/node_modules/firebase");
+require("../lib/node_modules/firebase/auth");
+require("../lib/node_modules/firebase/database");
 
+
+let inventory = [];
+let firebaseData = {};
+let firebaseID;
+
+//
 function fillTheData (data) {
     let keys = Object.keys(data);
     keys.forEach((item) => {
-        console.log("keys", keys);
         data[item].firebaseID = item;
         inventory.push(data[item]);
 });
@@ -22,13 +28,15 @@ function fillTheData (data) {
 }
 
 //get inventory data
-dataObject.getInventory = () => {
+firebaseData.getInventory = () => {
+    console.log("firebaseData", firebaseData);
     console.log("getInventory", inventory);
     return inventory;
+    
 };
 
 //load data xhr
-dataObject.loadInventory = () => {
+firebaseData.loadInventory = () => {
     let val = 1;
     return new Promise(function (resolve, reject) {
         let inventoryLoader = new XMLHttpRequest();
@@ -62,7 +70,7 @@ function areas() {
             }
             
         });
-            var x = xhr.open("GET", "https://theme-park-dp.firebaseio.com/areas.json"); //get the data
+            var x = xhr.open("GET", `https://theme-park-dp.firebaseio.com/areas.json`); //get the data
             xhr.send();
     });
 }
@@ -107,7 +115,7 @@ getData('GET', 'http://jsonplaceholder.typicode.com/todos')
         console.log("try Again Please");
     });
 
-module.exports = {areas,dataObject};
+module.exports = {areas,firebaseData};
       //module.exports =areas;
 
       //Search Function for Search Bar by Dan
