@@ -7,12 +7,17 @@ let loader = require("./load");
 // let mainSt = () =>{
 
 // }
+let searchBar = document.getElementById("txt-search");
+let areaDiv = document.getElementById("data-display");
 
-
+let textSearch = () => {
+    if (searchBar.value === "Main street U.S.A"){
+            
+    }
+};
 
 
 let areaGrid = () => {
-    let areaDiv = document.getElementById("data-display");
     areaDiv.innerHTML =
     `<div class="row">
      <div id="mainSt-btn" class="col">Main Street U.S.A</div>

@@ -33,7 +33,7 @@ function whoClickd(event) {                             //creates whoClickd func
     }   else if (currentId.toString() === "adventure-btn") {
         db.areas()
         .then((resolve) => {
-            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+            dataDisplay.innerHTML = `<div>${db.inventory.description}</div>`;
         }, (reject) => {
             console.log("oops, that didn't work");
         });
