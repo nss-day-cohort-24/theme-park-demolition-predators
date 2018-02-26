@@ -3,7 +3,7 @@ console.log("hello main.js");
 
 
 let publisher = require("./publish");
-
+let searcher = require("./search");
 let db = require("./load");
 
 publisher.areaGrid(); 

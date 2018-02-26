@@ -1,20 +1,17 @@
 "use strict";
 console.log("hello publish.js");
 let loader = require("./load");
+let search = require("./search");
 
 // let areaKey = loader.jsonArrayObject.areas;
 
 // let mainSt = () =>{
 
 // }
-let searchBar = document.getElementById("txt-search");
 let areaDiv = document.getElementById("data-display");
 
-let textSearch = () => {
-    if (searchBar.value === "Main street U.S.A"){
-            
-    }
-};
+
+
 
 
 let areaGrid = () => {
@@ -40,6 +37,8 @@ let areaGrid = () => {
      </div>`;
 
 };
+
+
 
 
 module.exports = {areaGrid};
