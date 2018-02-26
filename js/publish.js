@@ -13,11 +13,6 @@ let search = require("./search");
 let areaDiv = document.getElementById("data-display");
 
 
-let loader = require("./load");
-
-let areaDiv = document.getElementById("data-display");
-
-
 function areaGrid(aRay) {
   console.log(aRay);
   for(var i = 0; i < aRay.length; i++) {
