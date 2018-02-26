@@ -17,6 +17,7 @@ var dateToday = currentMonth + " " + currentDate + ", " + currentYear;
 
 var copyrightDate = '\u00A9' + " " + currentMonth + " " + currentDate + ", " + currentYear;
 console.log(copyrightDate);
+document.getElementById("copy").innerHTML = copyrightDate;
 
 module.exports = { currentDateTime, dateToday, copyrightDate };
 

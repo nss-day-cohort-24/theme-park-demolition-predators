@@ -11,17 +11,17 @@ $lato: 'Lato', sans serif;
 
 
 #data-display {
-  min-height: 300px;
+  max-height: 500px;
   background-color: $accent-color;
-  --availHeight: calc(100vh - 100px);
-  --halfAvail: calc(var(--availHeight)/2);
-  height: var(--halfAvail);
+  // --availHeight: calc(100vh - 100px);
+  // --halfAvail: calc(var(--availHeight)/2);
+  // height: var(--halfAvail);
   border: 1px solid white;
   font-family: $lato;
 }
 
 #data-display div {
-  height: 40px;
+  height: 30px;
   color: white;
   border: 1px solid white;
 }
