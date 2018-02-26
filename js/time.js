@@ -16,5 +16,8 @@ var currentYear = currentDateTime.getFullYear();
 var dateToday = currentMonth + " " + currentDate + ", " + currentYear;
 console.log(dateToday);
 
-module.exports = { currentDateTime, dateToday };
+var copyrightDate = '\u00A9' + " " + currentMonth + " " + currentDate + ", " + currentYear;
+console.log(copyrightDate);
+
+module.exports = { currentDateTime, dateToday, copyrightDate };
 
