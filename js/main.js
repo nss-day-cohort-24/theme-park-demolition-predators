@@ -1,22 +1,13 @@
 "use strict";
 console.log("hello main.js");
 
-let publisher = require("./publish");
+// let publisher = require("./publish");
 let db = require("./load");
 
 var dataDisplay = document.getElementById("data-display");
 
 // publisher.areaGrid();
 // console.log("button", document.getElementById("allArea-btn"));
-
-let getAreas = db.getAreas()
-.then((resolve) => {
-    console.log("resolve:", resolve);
-},
-(reject) => {
-    console.log("OOPS!");
-}
-);
 
 // Make data-display div contents clickable
 function whoClickd(event) {                             //creates whoClickd function and passes in event

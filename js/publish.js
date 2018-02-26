@@ -6,7 +6,6 @@ let loader = require("./load");
 let areaDiv = document.getElementById("data-display");
 
 function areaGrid(aRay) {
-  console.log(aRay);
   for(var i = 0; i < aRay.length; i++) {
     let areaName = aRay[i];
     console.log("areaName", areaName);
@@ -15,4 +14,6 @@ function areaGrid(aRay) {
   }
 }
 
-// module.exports = {areaGrid};
+areaGrid(loader.getAreas());
+
+module.exports = {areaGrid};

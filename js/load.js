@@ -1,7 +1,8 @@
 "use strict";
 console.log("Hello load.js");
 
-let parkAreas = ["toast"];
+let parkAreas = [];
+let fruit = ["apple", "banana", "orange"];
 
 function storeAreas(data) {
     let keys = Object.keys(data);
@@ -10,31 +11,35 @@ function storeAreas(data) {
         let areaName = data[item].name;
         parkAreas.push(areaName);
       });
-      // console.log(parkAreas);
 }
 
 //get All areas
-function getAreas() {
-    return new Promise(function (resolve, reject) {
+function loadAreas() {
+        return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
         xhr.addEventListener('load', function () {
             if (this.status === 200) {
-                var areas = JSON.parse(this.responseText);
-                // console.log("What do I have?", areas);
-                storeAreas(areas);
-                resolve(parkAreas);
+                var data = JSON.parse(this.responseText);
+                storeAreas(data);
+                resolve(data);
             } else {
-                reject(xhr.statusText);
+              var error = xhr.statusText;
+                reject(error);
             }
-
         });
             xhr.open("GET", `https://theme-park-dp.firebaseio.com/areas.json`);
             xhr.send();
     });
 }
 
-function giveAreas(){
-  return parkAreas;
+function getAreas(){
+  loadAreas()
+    .then(() => {
+      return parkAreas;
+    })
+    .catch(function(error){
+      console.log(error);
+    });
 }
 
-module.exports = {getAreas, giveAreas};
+module.exports = {getAreas};
