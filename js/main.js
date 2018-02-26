@@ -9,7 +9,7 @@ var dataDisplay = document.getElementById("data-display");
 // publisher.areaGrid();
 // console.log("button", document.getElementById("allArea-btn"));
 
-publisher.areaGrid();
+db.loadAreas();
 
 // Make data-display div contents clickable
 function whoClickd(event) {                             //creates whoClickd function and passes in event
