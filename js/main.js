@@ -2,12 +2,22 @@
 console.log("hello main.js");
 
 let publisher = require("./publish");
+
 let db = require("./load");
 
 var dataDisplay = document.getElementById("data-display");
 
 // publisher.areaGrid();
 // console.log("button", document.getElementById("allArea-btn"));
+
+let searcher = require("./search");
+let db = require("./load");
+
+let t = require("./time");
+
+publisher.areaGrid(); 
+console.log("button", document.getElementById("allArea-btn"));
+
 
 let getAreas = db.getAreas()
 .then((resolve) => {
@@ -31,7 +41,7 @@ function whoClickd(event) {                             //creates whoClickd func
     }   else if (currentId.toString() === "adventure-btn") {
         db.areas()
         .then((resolve) => {
-            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+            dataDisplay.innerHTML = `<div>${db.inventory.description}</div>`;
         }, (reject) => {
             console.log("oops, that didn't work");
         });

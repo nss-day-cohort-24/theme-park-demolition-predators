@@ -1,9 +1,22 @@
 "use strict";
+
 console.log("Hello publish.js");
+
+let loader = require("./load");
+let search = require("./search");
+
+// let areaKey = loader.jsonArrayObject.areas;
+
+// let mainSt = () =>{
+
+// }
+let areaDiv = document.getElementById("data-display");
+
 
 let loader = require("./load");
 
 let areaDiv = document.getElementById("data-display");
+
 
 function areaGrid(aRay) {
   console.log(aRay);
@@ -16,3 +29,4 @@ function areaGrid(aRay) {
 }
 
 // module.exports = {areaGrid};
+
