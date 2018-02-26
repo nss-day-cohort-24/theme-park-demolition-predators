@@ -1,18 +1,20 @@
 "use strict";
 console.log("hello publish.js");
 let loader = require("./load");
+let search = require("./search");
 
 // let areaKey = loader.jsonArrayObject.areas;
 
 // let mainSt = () =>{
 
 // }
+let areaDiv = document.getElementById("data-display");
+
 
 
 
 
 let areaGrid = () => {
-    let areaDiv = document.getElementById("data-display");
     areaDiv.innerHTML =
     `<div class="row">
      <div id="mainSt-btn" class="col">Main Street U.S.A</div>
@@ -35,6 +37,8 @@ let areaGrid = () => {
      </div>`;
 
 };
+
+
 
 
 module.exports = {areaGrid};

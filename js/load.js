@@ -21,8 +21,8 @@ function fillTheData (data) {
     let keys = Object.keys(data);
     keys.forEach((item) => {
         data[item].firebaseID = item;
-        inventory.push(data[item]);
-});
+        inventory.push(data[item]);        
+    });
     console.log("inventory after fill:", inventory);
     return inventory;
 }
@@ -34,6 +34,8 @@ firebaseData.getInventory = () => {
     return inventory;
     
 };
+console.log("firebaseData", firebaseData);
+
 
 //load data xhr
 firebaseData.loadInventory = () => {
