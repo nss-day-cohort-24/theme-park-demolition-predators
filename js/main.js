@@ -2,7 +2,12 @@
 console.log("hello main.js");
 
 let publisher = require("./publish");
+
 let db = require("./load");
+
+let searcher = require("./search");
+
+let t = require("./time");
 
 var dataDisplay = document.getElementById("data-display");
 
@@ -24,7 +29,7 @@ function whoClickd(event) {                             //creates whoClickd func
     }   else if (currentId.toString() === "adventure-btn") {
         db.areas()
         .then((resolve) => {
-            dataDisplay.innerHTML = `<div>${resolve}</div>`;
+            dataDisplay.innerHTML = `<div>${db.inventory.description}</div>`;
         }, (reject) => {
             console.log("oops, that didn't work");
         });
