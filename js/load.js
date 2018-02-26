@@ -19,7 +19,8 @@ function areaGrid(aRay) {
     let areaName = aRay[i];
     console.log("areaName", areaName);
     areaDiv.innerHTML +=
-    `<div id="${areaName}" class="col">${areaName}</div>`;
+    `<div id="${aRay[i]}" class="col">${aRay[i]}</div>
+    <div id="${aRay[i + 1]}" class="col">${aRay[i + 1]}</div>`;
   }
 }
 
