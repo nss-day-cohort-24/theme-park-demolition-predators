@@ -6,6 +6,8 @@ let publisher = require("./publish");
 
 let db = require("./load");
 
+let t = require("./time");
+
 publisher.areaGrid(); 
 console.log("button", document.getElementById("allArea-btn"));
 
