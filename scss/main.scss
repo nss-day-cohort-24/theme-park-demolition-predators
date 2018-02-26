@@ -21,7 +21,7 @@ $lato: 'Lato', sans serif;
 }
 
 #data-display div {
-  height: 50px;
+  height: 40px;
   color: white;
   border: 1px solid white;
 }
@@ -30,6 +30,9 @@ $lato: 'Lato', sans serif;
   width: 100%;
   height: 50px;
   background-color: $primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #map-display {
@@ -37,7 +40,7 @@ $lato: 'Lato', sans serif;
   --availHeight: calc(100vh - 100px);
   --halfAvail: calc(var(--availHeight)/2);
   height: var(--halfAvail);
-  background-image: url("/images/map_image.png");
+  background-image: url("../images/map_image.png");
   background-size: cover;
   background-position: center;
 }
@@ -48,7 +51,7 @@ $lato: 'Lato', sans serif;
 }
 
 #txt-search {
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .btn-primary {
@@ -62,9 +65,7 @@ $lato: 'Lato', sans serif;
 }
 
 .footer {
-  bottom: 0;
   width: 100%;
-  height: 50px;
   background-color: $primary-color;
 }
 
@@ -88,11 +89,31 @@ button {
   border-radius: 0;
   background-color: rgba(255, 255, 255, 0);
   border-color: white;
+  margin: .5em;
 }
 
-h1 {
-  margin-right: 5px;
-  font-size: 1em;
-  font-family: $julius;
-  color: white;
+h1{
+ position: relative;
+ font-size:15px;
+ color:white;
+ font-stretch: extra-expanded;
+ margin-top: 15px;
+}
+
+//From Million
+
+.form-control {
+ width: 30%;
+ height:25px;
+ position: relative;
+ border-radius: 5px;
+ margin-top: 12px;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.btn-group-sm {
+  margin-left: 20%;
 }

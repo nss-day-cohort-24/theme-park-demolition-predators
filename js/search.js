@@ -45,7 +45,11 @@ function onEnter(){
     );
 }
 
-btn.addEventListener("click", onEnter);
+searchBar.addEventListener("keypress", function(e) {
+    if (e.keyCode == 13){
+        onEnter();
+    }
+});
 
 //onEnter();
 

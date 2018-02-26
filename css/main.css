@@ -9,21 +9,24 @@
   font-family: "Lato", sans serif; }
 
 #data-display div {
-  height: 50px;
+  height: 40px;
   color: white;
   border: 1px solid white; }
 
 #header {
   width: 100%;
   height: 50px;
-  background-color: #3E50B4; }
+  background-color: #3E50B4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
 
 #map-display {
   width: 100%;
   --availHeight: calc(100vh - 100px);
   --halfAvail: calc(var(--availHeight)/2);
   height: var(--halfAvail);
-  background-image: url("/images/map_image.png");
+  background-image: url("../images/map_image.png");
   background-size: cover;
   background-position: center; }
 
@@ -32,7 +35,7 @@
   background-color: #3E50B4; }
 
 #txt-search {
-  display: inline-block; }
+  /* display: inline-block; */ }
 
 .btn-primary {
   background-color: rba(255, 255, 255, 0);
@@ -43,9 +46,7 @@
   border: 1px solid white; }
 
 .footer {
-  bottom: 0;
   width: 100%;
-  height: 50px;
   background-color: #3E50B4; }
 
 .list_icon {
@@ -64,12 +65,27 @@ button {
   color: white;
   border-radius: 0;
   background-color: rgba(255, 255, 255, 0);
-  border-color: white; }
+  border-color: white;
+  margin: .5em; }
 
 h1 {
-  margin-right: 5px;
-  font-size: 1em;
-  font-family: "Julius Sans One", sans serif;
-  color: white; }
+  position: relative;
+  font-size: 15px;
+  color: white;
+  font-stretch: extra-expanded;
+  margin-top: 15px; }
+
+.form-control {
+  width: 30%;
+  height: 25px;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 12px; }
+
+.logo {
+  max-width: 100px; }
+
+.btn-group-sm {
+  margin-left: 20%; }
 
 /*# sourceMappingURL=main.css.map */

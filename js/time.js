@@ -14,7 +14,6 @@ var currentMonth = monthNames[currentDateTime.getMonth()];
 var currentDate = currentDateTime.getDate();
 var currentYear = currentDateTime.getFullYear();
 var dateToday = currentMonth + " " + currentDate + ", " + currentYear;
-console.log(dateToday);
 
 var copyrightDate = '\u00A9' + " " + currentMonth + " " + currentDate + ", " + currentYear;
 console.log(copyrightDate);
