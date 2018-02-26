@@ -5,15 +5,15 @@ let publisher = require("./publish");
 
 let db = require("./load");
 
+let searcher = require("./search");
+
+let t = require("./time");
+
 var dataDisplay = document.getElementById("data-display");
 
 // publisher.areaGrid();
 // console.log("button", document.getElementById("allArea-btn"));
 
-let searcher = require("./search");
-let db = require("./load");
-
-let t = require("./time");
 
 publisher.areaGrid(); 
 console.log("button", document.getElementById("allArea-btn"));
