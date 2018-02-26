@@ -1,8 +1,15 @@
 "use strict";
 console.log("hello main.js");
 
-
 let publisher = require("./publish");
+
+let db = require("./load");
+
+var dataDisplay = document.getElementById("data-display");
+
+// publisher.areaGrid();
+// console.log("button", document.getElementById("allArea-btn"));
+
 let searcher = require("./search");
 let db = require("./load");
 
@@ -11,7 +18,8 @@ let t = require("./time");
 publisher.areaGrid(); 
 console.log("button", document.getElementById("allArea-btn"));
 
-let getAreas = db.areas()
+
+let getAreas = db.getAreas()
 .then((resolve) => {
     console.log("resolve:", resolve);
 },
@@ -19,8 +27,6 @@ let getAreas = db.areas()
     console.log("OOPS!");
 }
 );
-
-var dataDisplay = document.getElementById("data-display");
 
 // Make data-display div contents clickable
 function whoClickd(event) {                             //creates whoClickd function and passes in event
@@ -81,10 +87,9 @@ function whoClickd(event) {                             //creates whoClickd func
         }, (reject) => {
             console.log("oops, that didn't work");
         });
-        
+
 }
 }
 
 
 document.getElementById("data-display").addEventListener("click", whoClickd);
-
