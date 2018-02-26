@@ -13,33 +13,35 @@ function storeAreas(data) {
       });
 }
 
+function getAreas() {
+  return parkAreas;
+}
+
 //get All areas
-function loadAreas() {
-        return new Promise(function (resolve, reject) {
+let loadAreas = () => {
+        new Promise((resolve, reject) => {
         var xhr = new XMLHttpRequest();
         xhr.addEventListener('load', function () {
             if (this.status === 200) {
                 var data = JSON.parse(this.responseText);
                 storeAreas(data);
-                resolve(data);
             } else {
               var error = xhr.statusText;
-                reject(error);
+              console.log("Something went wrong.", error);
             }
         });
-            xhr.open("GET", `https://theme-park-dp.firebaseio.com/areas.json`);
-            xhr.send();
-    });
-}
-
-function getAreas(){
-  loadAreas()
-    .then(() => {
-      return parkAreas;
+        xhr.open("GET", `https://theme-park-dp.firebaseio.com/areas.json`);
+        xhr.send();
+        resolve();
     })
-    .catch(function(error){
-      console.log(error);
+    .then(() => {
+      console.log(parkAreas);
+      return parkAreas;
     });
-}
+};
 
-module.exports = {getAreas};
+
+
+
+
+module.exports = {loadAreas};

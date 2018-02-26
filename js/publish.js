@@ -14,6 +14,5 @@ function areaGrid(aRay) {
   }
 }
 
-areaGrid(loader.getAreas());
 
 module.exports = {areaGrid};
